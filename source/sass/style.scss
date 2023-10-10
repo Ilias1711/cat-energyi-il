@@ -1,3 +1,14 @@
-body {
-  background-color: red
-}
+@import "../sass/global/variables.scss";
+@import "../sass/global/fonts.scss";
+@import "../sass/global/global.scss";
+@import "../sass/global/page.scss";
+@import "../sass/blocks/main-header.scss";
+@import "../sass/blocks/head-block.scss";
+@import "../sass/blocks/programs.scss";
+@import "../sass/blocks/intro.scss";
+@import "../sass/blocks/demo.scss";
+@import "../sass/blocks/footer.scss";
+@import "../sass/blocks/search.scss";
+@import "../sass/blocks/catalog.scss";
+@import "../sass/blocks/additionally.scss";
+@import "../sass/blocks/form.scss";

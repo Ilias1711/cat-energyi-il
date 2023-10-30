@@ -15,11 +15,11 @@
   position: absolute;
   top: 20px;
   right: -20px;
-  background-color: #68b738;
+  background-color: $green;
 }
 
 .additionally__title {
-  font-family: ("Oswald");
+  font-family: $fontOswald;
   display: inline-block;
   font-size: 36px;
   vertical-align: baseline;
@@ -27,7 +27,7 @@
   width: auto;
   line-height: 36px;
   text-align: left;
-  background-color: #ffffff;
+  background-color: $white;
   margin-top: 0;
   padding-right: 20px;
 }
@@ -39,13 +39,12 @@
 }
 
 .additionally__item {
-  padding-top: 13px;
-  padding-bottom: 19px;
-  border-top: 1px solid #cdcdcd;
+  padding: 25px 37px 29px 38px;
+  border-top: 1px solid $lightgrey;
 }
 
 .additionally__item-vitamin {
-  border-bottom: 1px solid #cdcdcd;
+  border-bottom: 1px solid $lightgrey;
 }
 
 .additionally-button {
@@ -53,18 +52,18 @@
 }
 
 .additionally__item-title {
-  font-family: ("Oswald");
+  font-family: $fontOswald;
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
-  color: #000000;
+  color: $black;
   line-height: 16px;
   margin-top: 0;
   margin-bottom: 11px;
 }
 
 .additionally__item-tab {
-  font-family: ("Lato"), sans-serif;
+  font-family: $fontLato, sans-serif;
   font-size: 14px;
   line-height: 14px;
   width: 100%;
@@ -77,18 +76,19 @@
 }
 
 .additionally-promotion {
-  background-image: url("../img/Catalog/catalog-gift\ .jpg");
+  background-image: url("../img/gift-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-color: #68b738;
+  background-color: $green;
   text-align: center;
   padding-top: 65px;
   padding-bottom: 44px;
-  margin-top: 39px;
+  background-position: center center;
+  background-size: 100% 100%;
 }
 
 .additionally-promotion-text {
-  color: #ffffff;
-  font-family: ("Lato");
+  color: $white;
+  font-family: $fontLato;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -97,10 +97,13 @@
 
 @media (min-width: $tablet-width) {
   .additionally__list {
-    padding-left: 40px;
-    padding-right: 40px;
-    border-left: 1px solid #cdcdcd;
-    border-right: 1px solid #cdcdcd;
+    margin-bottom: 70px;
+    border-left: 1px solid $lightgrey;
+    border-right: 1px solid $lightgrey;
+  }
+
+  .additionally-promotion {
+    background-image: url("../img/gift-tablet@2x.jpg");
   }
 
   .additionally__item-title {
@@ -114,13 +117,22 @@
 @media (min-width: $desktop-width) {
   .additionally-inner {
     display: flex;
+    justify-content: center;
+  }
+
+  .additionally-promotion {
+    background-image: url("../img/gift-desktop@1x.jpg");
+    max-width: 245px;
+    height: 170px;
   }
 
   .additionally__item-tab {
     font-size: 16px;
     line-height: 20px;
-    width: 40%;
     margin-top: 2px;
+    width: 285px;
+    margin-right: 39px;
+    margin-bottom: 0;
   }
 
   .additionally__list {
@@ -131,18 +143,12 @@
 
   .additionally__item {
     display: flex;
+    padding: 15px 0 15px 0;
   }
 
   .additionally__item-title {
     width: 245px;
     margin: 0 81px 0 0;
-  }
-
-  .additionally__item-tab {
-    width: 285px;
-    margin-right: 39px;
-    margin-top: 8px;
-    margin-bottom: 0;
   }
 
   .additionally__item-tab--price {

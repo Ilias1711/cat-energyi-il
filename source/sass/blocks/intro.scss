@@ -7,7 +7,7 @@
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
-  color: #000000;
+  color: $black;
   margin-top: 0;
   margin-bottom: 27px;
 }
@@ -26,7 +26,7 @@
 }
 
 .intro-item__text {
-  font-family: "Lato", sans-serif;
+  font-family: $fontLato, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
@@ -40,7 +40,7 @@
   justify-content: center;
   width: 60px;
   height: 60px;
-  background-color: #68b738;
+  background-color: $green;
   align-items: center;
   box-sizing: inherit;
 }

@@ -29,7 +29,7 @@
 }
 
 .head-block__title {
-  color: #ffffff;
+  color: $white;
   text-align: center;
   margin-top: 0;
   font-size: 36px;
@@ -39,7 +39,7 @@
 }
 
 .head-block__text {
-  color: #ffffff;
+  color: $white;
   line-height: 14px;
   text-transform: uppercase;
   margin-bottom: 27px;
@@ -76,7 +76,7 @@
 
   .head-block__title,
   .head-block__text {
-    color: #000000;
+    color: $black;
     text-align: left;
   }
 

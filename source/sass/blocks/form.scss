@@ -21,9 +21,9 @@
 }
 
 .form__set-options--input {
+  font-family: $fontOswald;
   width: 100%;
   margin-left: 15px;
-  font-family: inherit;
   font-size: 16px;
   text-transform: uppercase;
   padding: 12px 15px;
@@ -68,11 +68,11 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
-  color: #000000;
+  color: $black;
   max-width: 205px;
   padding-right: 24px;
   margin: 0;
-  background-color: #ffffff;
+  background-color: $white;
 }
 
 .form__set-contact--head::before {
@@ -82,7 +82,7 @@
   height: 3px;
   position: absolute;
   top: 44px;
-  background-color: #68b738;
+  background-color: $green;
 }
 
 .form__set-contact--foot {
@@ -103,16 +103,16 @@
 .form__set-contact--label {
   font-size: 16px;
   text-transform: uppercase;
-  color: #000000;
+  color: $black;
   white-space: nowrap;
 }
 
 .form__set-contact--input {
-  font-family: inherit;
+  font-family: $fontOswald;
   font-size: 16px;
   text-transform: uppercase;
   padding: 12px 15px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid $lightgrey;
   outline: 0;
   width: 100%;
   margin-left: 13px;
@@ -130,10 +130,10 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
-  color: #000000;
+  color: $black;
   padding-right: 24px;
   margin: 0;
-  background-color: #ffffff;
+  background-color: $white;
 }
 
 .form__set-comment--text {
@@ -141,7 +141,7 @@
   height: 150px;
   margin-top: 14px;
   resize: none;
-  font-family: inherit;
+  font-family: $fontOswald;
   font-size: 16px;
   text-transform: uppercase;
   padding: 12px 15px;
@@ -192,7 +192,7 @@
   height: 3px;
   position: absolute;
   top: 12px;
-  background-color: #68b738;
+  background-color: $green;
 }
 
 .form__set-comment {
@@ -216,7 +216,7 @@
   left: 0;
   width: 20px;
   height: 20px;
-  border: 2px solid #000000;
+  border: 2px solid $black;
   border-radius: 50%;
 }
 
@@ -226,7 +226,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: #000000;
+  color: $black;
   width: 100%;
   padding-left: 45px;
   padding-top: 6px;
@@ -255,7 +255,7 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #68b738;
+  background-color: $green;
 }
 
 .form__check-input:checked+.form__check::after {
@@ -268,7 +268,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: #000000;
+  color: $black;
   padding-left: 45px;
   padding-top: 6px;
   padding-bottom: 6px;
@@ -312,12 +312,11 @@
   }
 
   .title-block__text {
-    font-family: ('Oswald');
+    font-family: $fontOswald;
     width: 330px;
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
-    letter-spacing: 0em;
     text-align: left;
     margin-top: 40px;
     margin-left: 30px;

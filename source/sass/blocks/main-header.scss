@@ -1,13 +1,11 @@
-.main-header__logo-picture__desktop {
-  display: none;
-}
+
 
 .main-header {
   display: flex;
   margin-top: 15px;
   justify-content: space-between;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: $white;
+  color: $black;
 }
 
 .main-header__wrapper {
@@ -24,7 +22,7 @@
 }
 
 .main-header__logo-title {
-  padding-top: 10px;
+  margin-left: 20px;
 }
 
 .main-header__logo-picture__tablet {
@@ -46,8 +44,7 @@
   height: 50px;
   cursor: pointer;
   background-color: transparent;
-  color: #000000;
-
+  color: $black;
 }
 
 .main-header__top {
@@ -64,7 +61,7 @@
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
-  color: #000000;
+  color: $black;
   padding-top: 22px;
   padding-bottom: 23px;
 }
@@ -94,7 +91,7 @@
   bottom: 14px;
   width: 100%;
   height: 2px;
-  background-color: #68b738;
+  background-color: $green;
 }
 
 
@@ -117,14 +114,10 @@
     padding: 10px 33px;
   }
 
-  .main-header__logo-picture__desktop {
-    display: flex;
+  .main-header__logo-picture {
+    width: 60px;
+    height: 50px;
   }
-
-  .main-header__logo-title {
-    display: none;
-  }
-
 
   .main-nav__list {
     display: flex;
@@ -137,9 +130,6 @@
     display: block;
   }
 
-  .main-header__logo-picture__mobile {
-    display: none;
-  }
 
   .main-nav {
     min-height: 50px;

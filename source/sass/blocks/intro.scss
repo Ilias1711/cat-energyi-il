@@ -3,7 +3,7 @@
   padding-right: 20px;
 }
 
-.intro-title {
+.intro__title {
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
@@ -12,21 +12,21 @@
   margin-bottom: 27px;
 }
 
-.intro-list {
+.intro__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
   justify-content: space-between;
 }
 
-.intro-item {
+.intro__item {
   display: flex;
   justify-content: space-between;
   min-height: 60px;
 }
 
-.intro-item__text {
-  font-family: $fontLato, sans-serif;
+.intro__item__text {
+  font-family: $fontLato;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
@@ -35,7 +35,7 @@
   margin: 0;
 }
 
-.intro-item__picture {
+.intro__item__picture {
   display: flex;
   justify-content: center;
   width: 60px;
@@ -50,13 +50,13 @@
   height: 30px;
 }
 
-.intro-item:not(:last-child) {
+.intro__item:not(:last-child) {
   margin-bottom: 20px;
 }
 
 
 @media (min-width: $tablet-width) {
-  .intro-list {
+  .intro__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 150px;
@@ -68,22 +68,22 @@
     padding-right: 30px;
   }
 
-  .intro-title {
+  .intro__title {
     font-size: 60px;
     margin-bottom: 70px;
   }
 
-  .intro-item__picture {
+  .intro__item__picture {
     width: 80px;
     height: 80px;
     margin-bottom: 34px;
   }
 
-  .intro-item__text {
+  .intro__item__text {
     width: 255px;
   }
 
-  .intro-item {
+  .intro__item {
     flex-wrap: wrap;
     align-items: flex-start;
     max-width: 300px;
@@ -94,7 +94,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .intro-list {
+  .intro__list {
     display: flex;
     gap: 70px;
   }

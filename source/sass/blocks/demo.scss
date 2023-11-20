@@ -3,6 +3,13 @@
   padding-right: 20px;
 }
 
+.demo__toggle {
+  width: 50%;
+  height: 6px;
+  border-radius: 10px;
+  background-color: $green;
+}
+
 .demo {
   padding-top: 17px;
   padding-bottom: 24px;
@@ -20,7 +27,7 @@
 
 
 .demo__text {
-  font-family: $fontLato, sans-serif;
+  font-family: $fontLato;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
@@ -56,10 +63,11 @@
   text-transform: uppercase;
   color: $black;
   margin: auto;
+  background-color: $platinum;
 }
 
 .demo__stats-subtitle {
-  font-family: $fontLato, sans-serif;
+  font-family: $fontLato;
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
@@ -75,7 +83,7 @@
   top: 50px;
 }
 
-.demo-price {
+.demo__price {
   line-height: 20px;
   text-transform: uppercase;
   color: $black;
@@ -101,15 +109,8 @@
   background-color: $white;
 }
 
-.demo-toggle {
-  width: 50%;
-  height: 6px;
-  border-radius: 10px;
-  background-color: $green;
-}
-
 .demo__button-before {
-  font-family: $fontOswald, inherit;
+  font-family: $fontOswald;
   border: 0;
   background-color: transparent;
   font-size: 16px;
@@ -122,7 +123,7 @@
 }
 
 .demo__button-after {
-  font-family: $fontOswald, inherit;
+  font-family: $fontOswald;
   border: 0;
   background-color: transparent;
   font-size: 16px;
@@ -156,7 +157,7 @@
     position: relative;
     padding-top: 44px;
     padding-bottom: 65px;
-    background-color: transparent;
+    background-color: $platinum;
   }
 
   .demo__title {
@@ -180,7 +181,7 @@
     align-items: center;
   }
 
-  .demo-price {
+  .demo__price {
     font-size: 20px;
     line-height: 30px;
     text-align: right;
@@ -211,7 +212,7 @@
     cursor: pointer;
   }
 
-  .demo-toggle {
+  .demo__toggle {
     position: absolute;
     left: 50%;
     top: 25%;
@@ -268,7 +269,7 @@
     margin-top: 0;
   }
 
-  .demo-price {
+  .demo__price {
     display: flex;
     justify-content: space-between;
     width: 325px;

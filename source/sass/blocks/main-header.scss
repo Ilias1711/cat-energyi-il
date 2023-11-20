@@ -37,8 +37,9 @@
 
 
 .main-nav__toggle {
+  position: absolute;
   top: 0;
-  left: auto;
+  right: 0;
   z-index: 2;
   width: 50px;
   height: 50px;
@@ -48,9 +49,25 @@
 }
 
 .main-header__top {
+  position: relative;
   display: flex;
   justify-content: space-between;
   height: 66px;
+}
+
+.main-nav--closed {
+  display: none;
+}
+
+.main-nav__toggle .main-nav__toggle--closed::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 17px;
+  width: 36px;
+  height: 2px;
+  background-color: $black;
+  box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
 }
 
 .main-nav__list-link {

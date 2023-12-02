@@ -1,5 +1,6 @@
 .catalog__list {
   list-style-type: none;
+  padding: 0;
 }
 
 .catalog__list-item {
@@ -12,8 +13,10 @@
 }
 
 .title-block {
-  padding-top: 14px;
+  padding-top: 11px;
   padding-bottom: 29px;
+  border-top: 1px solid $lightgrey;
+  border-bottom: 1px solid $lightgrey;
 }
 
 .title-block__title {
@@ -28,7 +31,11 @@
 .catalog__footer {
   text-align: center;
   padding-top: 26px;
-  padding-bottom: 25px;
+  padding-bottom: 6px;
+}
+
+.catalog-block {
+  border-bottom: 1px solid $lightgrey;
 }
 
 .catalog__footer-title {
@@ -37,7 +44,7 @@
   font-weight: 400;
   text-transform: uppercase;
   color: $black;
-  margin-top: 20px;
+  margin-top: 15px;
   margin-bottom: 8px;
 }
 

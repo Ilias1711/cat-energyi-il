@@ -34,14 +34,14 @@
   text-transform: uppercase;
   color: $black;
   width: 100px;
-  margin-top: 21px;
   margin-bottom: 12px;
+  margin-top: 5px;
 }
 
 .product__image {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-style: none;
 }
 
@@ -52,16 +52,14 @@
 
 
 .product__picture {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50%;
 }
 
 .product {
-  margin-left: -20px;
-  margin-right: -20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 25px;
+  margin-top: 16px;
 }
 
 @media (min-width: $tablet-width) {

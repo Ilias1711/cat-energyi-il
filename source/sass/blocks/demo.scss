@@ -22,7 +22,7 @@
   font-weight: 400;
   color: $black;
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 
@@ -34,7 +34,7 @@
   text-align: left;
   width: 95%;
   margin-top: 0;
-  margin-bottom: 23px;
+  margin-bottom: 20px;
 }
 
 .demo__stats-list {
@@ -43,7 +43,6 @@
   justify-content: center;
   list-style-type: none;
   align-items: center;
-  gap: 32px;
 }
 
 .demo__stats-item {
@@ -76,11 +75,10 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -14px;
   margin: 0 auto;
-  width: 110px;
+  width: 70px;
   background-color: $platinum;
-  top: 50px;
+  top: 46px;
 }
 
 .demo__price {
@@ -88,8 +86,10 @@
   text-transform: uppercase;
   color: $black;
   text-align: center;
-  margin-top: 34px;
+  margin-top: 32px;
   margin-bottom: 40px;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .demo__button-block {
@@ -97,6 +97,7 @@
   justify-content: space-between;
   align-items: center;
   width: 219px;
+  height: 252px;
   margin: 15px auto 0;
 }
 
@@ -136,7 +137,7 @@
 }
 
 .demo__stats-item--weight {
-  margin-right: 20px;
+  margin-right: 12px;
 }
 
 .demo__stats-item--days {
@@ -167,7 +168,23 @@
 
   .demo__text {
     width: 100%;
-    margin-bottom: 51px;
+    margin-bottom: 34px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .demo__stats-value {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 37px;
+    text-align: center;
+  }
+
+  .demo__stats-item {
+    width: 162px;
+    height: 38px;
   }
 
   .demo__stats-list {
@@ -227,18 +244,28 @@
   }
 
   .demo__progress {
-    margin-top: 81px;
+    margin-top: 122px;
     background-color: $platinum;
+    height: 512px;
   }
 
   .demo__stats-subtitle {
-    background-color: $smokywhite;
+    background-color: $platinum;
+    font-family: $fontLato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: center;
+    top: 63px;
+    width: 136px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .demo {
+    display: flex;
     background-color: $smokywhite;
+    padding-top: 23px;
   }
 
   .demo__wrapper {
@@ -249,12 +276,19 @@
 
   .demo__title {
     width: 435px;
-    margin-top: 51px;
     margin-bottom: 145px;
   }
 
+  .demo__stats-value {
+    background-color: $smokywhite;
+  }
+
+  .demo__stats-subtitle {
+    background-color: $smokywhite;
+  }
+
   .demo__text {
-    margin-bottom: 68px;
+    margin-bottom: 52px;
     width: 435px;
   }
 
@@ -274,9 +308,122 @@
     justify-content: space-between;
     width: 325px;
     text-align: left;
+    margin-top: 35px;
   }
 
   .demo__button-block {
     background-color: transparent;
+  }
+}
+
+.slider-range {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.slider-range__item {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 280px;
+
+  @media (min-width: 1200px) {
+    max-width: 560px;
+  }
+}
+
+.slider-range__slide {
+  width: 50%;
+  overflow: hidden;
+
+  &--before {
+    text-align: right;
+  }
+
+  &--after {
+    text-align: left;
+  }
+}
+
+.slider-range__image {
+  max-width: 280px;
+  background-color: transparent;
+
+  @media (min-width: 764px) {
+    max-width: 560px;
+  }
+}
+
+.slider-range__scale {
+  position: absolute;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.slider-range__bar {
+  width: 4px;
+  height: 100%;
+  border-radius: 2px;
+  background-color: grey;
+
+  &:hover {
+    background-color: green;
+  }
+
+  &:active {
+    background-color: green;
+  }
+}
+
+.slider-range__togle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-20px, -20px);
+  background: white;
+  border: 2px solid grey;
+  border-radius: 20px;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid green;
+  }
+
+  &:active {
+    border: 2px solid green;
+  }
+
+  &--left::before,
+  &--right::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-4px, -9px);
+    margin-left: -9px;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-right: 9px solid grey;
+  }
+
+  &--right::after {
+    transform: rotate(180deg) translate(-13px, 9px);
+  }
+
+  &--left:hover::before,
+  &--right:hover::after {
+    border-right-color: green;
+  }
+
+  &--left:active::before,
+  &--right:active::after {
+    border-right-color: green;
   }
 }

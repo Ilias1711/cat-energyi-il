@@ -32,9 +32,14 @@
   width: 50%;
 }
 
+
+.search__map {
+  height: 362px;
+}
+
 @media (min-width: $tablet-width) {
   .search__inner {
-    padding: 63px 41px 59px;
+    padding: 63px 49px 59px;
   }
 
   .search__title {
@@ -46,6 +51,10 @@
   .search__address {
     width: 170px;
     text-align: right;
+  }
+
+  .search__map {
+    height: 400px;
   }
 }
 

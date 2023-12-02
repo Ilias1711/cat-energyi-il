@@ -9,8 +9,8 @@
 }
 
 .main-header__wrapper {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
   justify-content: space-between;
   width: 100%;
 }
@@ -38,11 +38,11 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 6px;
+  right: 1px;
   z-index: 2;
-  width: 50px;
-  height: 50px;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
   background-color: transparent;
   color: $black;
@@ -52,7 +52,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  height: 66px;
+  height: 52px;
 }
 
 .main-nav--closed {
@@ -72,7 +72,7 @@
 
 .main-nav__list-link {
   display: inline-block;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
@@ -121,6 +121,8 @@
   }
 
   .main-header__wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -128,7 +130,11 @@
 
   .main-nav__list-item {
     border: none;
-    padding: 10px 33px;
+    padding: 10px 36px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
   }
 
   .main-header__logo-picture {
@@ -141,6 +147,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin-left: 9px;
   }
 
   .main-header__logo-picture__tablet {
@@ -168,6 +175,35 @@
   .main-nav__list {
     justify-content: flex-end;
     width: 100%;
-    margin-left: auto;
+    margin-left: 11px;
   }
+
+  .main-header__wrapper {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  .main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 31px;
+    background-color: transparent;
+  }
+
+  .main-nav__list-link {
+    color: $white;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-top: 31px;
+  }
+
+  .main-nav__list-item--active .main-nav__list-link::after {
+    color: $white;
+  }
+
 }

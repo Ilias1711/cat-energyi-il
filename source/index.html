@@ -155,7 +155,7 @@
                 питомцу сбросить лишний вес.
               </p>
               <a class="program-item__link" href="#!">
-                <h3 class="program__link-title">КАТАЛОГ SLIM</h3>
+                <h3 class="program__link-title program__link-title--slim">КАТАЛОГ SLIM</h3>
                 <svg width="32" height="12">
                   <use href="#pro-slim-arrow"></use>
                 </svg>
@@ -172,12 +172,12 @@
                 />
               </div>
               <h2 class="program-item__title">НАБОР МАССЫ</h2>
-              <p class="program-item__intro">
+              <p class="program-item__intro program-item__intro--pro">
                 Заработать авторитет среди дворовых котов и даже собак? Серия
                 Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
               </p>
               <a class="program-item__link" href="#!">
-                <h3 class="program__link-title">КАТАЛОГ PRO</h3>
+                <h3 class="program__link-title program__link-title--pro">КАТАЛОГ PRO</h3>
                 <svg width="32" height="12">
                   <use href="#pro-slim-arrow"></use>
                 </svg>
@@ -190,7 +190,7 @@
         <div class="intro__wrapper">
           <h2 class="intro__title">Как это работает</h2>
           <ul class="intro__list">
-            <li class="intro__item">
+            <li class="intro__item intro__item--1">
               <div class="intro__item__picture">
                 <img
                   class="intro__img"
@@ -205,7 +205,7 @@
                 вещества.
               </p>
             </li>
-            <li class="intro__item">
+            <li class="intro__item intro__item--2">
               <div class="intro__item__picture">
                 <img
                   class="intro__img"
@@ -220,7 +220,7 @@
                 готово.
               </p>
             </li>
-            <li class="intro__item">
+            <li class="intro__item intro__item--3">
               <div class="intro__item__picture">
                 <img
                   class="intro__img"
@@ -235,7 +235,7 @@
                 питание.
               </p>
             </li>
-            <li class="intro__item">
+            <li class="intro__item intro__item--4">
               <div class="intro__item__picture">
                 <img
                   class="intro__img"
@@ -282,21 +282,27 @@
           </div>
         </div>
         <div class="demo__progress">
-          <div class="demo__picture"></div>
-          <div class="demo__button-block">
-            <button class="demo__button-before">Было</button>
-            <div class="demo__button-progress">
-              <input
-                class="demo__range"
-                type="range"
-                min="1"
-                max="100"
-                value="50"
-              />
-              <div class="demo__toggle"></div>
+          <div class="slider-range">
+            <div class="slider-range__item">
+              <div class="slider-range__slide slider-range__slide--before">
+                <picture>
+                  <img class="slider-range__image slider-range__image--before" src="./img/demo__picture-mobile-before.png" alt="Толстый кот.">
+                </picture>
+              </div>
+              <div class="slider-range__slide slider-range__slide--after">
+                <picture>
+                  <img class="slider-range__image slider-range__image--after" src="./img/demo__picture-mobile-after@1x.png" alt="Стройный кот.">
+                </picture>
+              </div>
             </div>
-            <button class="demo__button-after">Стало</button>
-          </div>
+
+            <div class="slider-range__scale">
+              <div class="slider-range__bar">
+                <button class="slider-range__togle slider-range__togle--left slider-range__togle--right" type="button">
+                  <span class="visually-hidden">Двигать картинку в лево, в право.</span>
+                </button>
+              </div>
+            </div>
         </div>
       </section>
       <section class="search">
@@ -312,7 +318,7 @@
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198189!2d30.320472477345316!3d59.938719162093555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1693229479450!5m2!1sru!2sru"
             width="100%"
-            height="400"
+            height="100%"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"

@@ -1,16 +1,10 @@
 .head-block {
   padding-top: 26px;
-  background-repeat: no-repeat;
-  background-image: url("../img/index-background-mobile@2x.jpg");
-  background-position: 50% -10px;
-  background-size: 100% 312px;
 }
 
 .head-block__wrapper {
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .head-block__button {
@@ -55,9 +49,14 @@
   .head-block {
     padding-top: 66px;
     padding-bottom: 525px;
-    background-image: url("../img/index-can-desktop@2x.png");
-    background-position: 63px 260px;
-    background-size: 675px 609px;
+  }
+
+  .head-block__img {
+    position: absolute;
+    width: 661px;
+    left: 46px;
+    top: 199px;
+    z-index: -1;
   }
 
   .head-block__text {
@@ -81,7 +80,8 @@
   }
 
   .head-block__wrapper {
-    padding-left: 116px;
+    position: relative;
+    padding-left: 88px;
     padding-right: 30px;
   }
 
@@ -97,49 +97,45 @@
     color: $black;
     text-align: left;
   }
-
-  .head-block__img {
-    display: none;
-  }
 }
 
 @media (min-width: $desktop-width) {
   .head-block__wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
     height: 602px;
-    padding-left: 188px;
+    padding-left: 74px;
     padding-right: 110px;
   }
 
   .head-block {
-    padding-top: 140px;
-    background-image: url("../img/ibd1x.jpg");
-    background-position: calc(100% + 0px) 0;
-    background-size: 720px 696px;
-    padding-bottom: 33px;
+    padding-top: 33px;
+    padding-bottom: 35px;
   }
 
   .head-block__picture {
+    position: absolute;
+    left: 39%;
     order: 4;
+    width: 552px;
+    height: 499px;
   }
 
   .head-block__img {
+    position: absolute;
+    top: 4px;
+    left: -29px;
     display: inline-block;
-    width: 607px;
-    margin-left: -56px;
+    width: 100%;
+    height: 100%;
   }
 
   .head-block__title {
-    margin-top: 85px;
+    margin-top: 86px;
   }
 
-  @media (min-resolution: 2dppx) {
-    .head-block {
-      background-image: url("../img/ibd2x.jpg");
-    }
-  }
 }

@@ -1,21 +1,11 @@
 .additionally {
-  padding-top: 24px;
-  padding-bottom: 35px;
+  padding-top: 26px;
+  padding-bottom: 33px;
+  overflow-x: hidden;
 }
 
 .additionally__wrapper {
   position: relative;
-}
-
-.additionally__wrapper::before {
-  content: "";
-  z-index: -1;
-  width: 100%;
-  height: 3px;
-  position: absolute;
-  top: 14px;
-  right: -20px;
-  background-color: $green;
 }
 
 .additionally__title {
@@ -27,12 +17,35 @@
   text-align: left;
   background-color: $white;
   margin-top: 0;
-  padding-right: 20px;
   font-size: 24px;
   line-height: 24px;
-  letter-spacing: 0em;
-  margin-bottom: 37px;
+  margin-bottom: 36px;
+  color: #111111;
+  position: relative; // нужен для того чтоб перекрыть полосы
+  padding-right: 10px;
+  padding-left: 10px;
 }
+
+.additionally__title::after,
+.additionally__title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100vw; // чтоб тянулось на всю ширину экрана
+  height: 3px;
+  margin-top: 2px;
+  background: #68b738;
+  z-index: -1;
+}
+
+.additionally__title::after {
+  left: 20px;
+}
+
+.additionally__title::before {
+  right: 0;
+}
+
 
 .additionally__list {
   list-style: none;
@@ -41,7 +54,8 @@
 }
 
 .additionally__item {
-  padding: 13px 0 20px 0;
+  padding-top: 14px;
+  padding-bottom: 18px;
   border-top: 1px solid $lightgrey;
 }
 
@@ -49,7 +63,7 @@
   border-bottom: 1px solid $lightgrey;
 }
 
-.additionally-button {
+.additionally__button {
   width: 100%;
   margin-top: 14px;
 }
@@ -78,7 +92,7 @@
   text-align: end;
 }
 
-.additionally-promotion {
+.additionally__promotion {
   background-image: url("../img/gift-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-color: $green;
@@ -87,17 +101,17 @@
   padding-bottom: 25px;
   background-position: center center;
   background-size: 100% 100%;
-  margin-top: 33px;
+  margin-top: 37px;
 }
 
-.additionally-promotion-text {
+.additionally__promotion-text {
   color: $white;
   font-family: $fontLato;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-align: center;
-  padding: 19px 55px 7px 55px;
+  padding: 13px 55px 7px 55px;
 }
 
 @media (min-width: $tablet-width) {
@@ -107,8 +121,50 @@
     border-right: 1px solid $lightgrey;
   }
 
-  .additionally-promotion {
+  .additionally {
+    padding-top: 51px;
+    padding-bottom: 75px;
+  }
+
+  .additionally__promotion-text {
+    text-align: left;
+    width: 175px;
+    padding-top: 15px;
+  }
+
+  .additionally__title {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-left: 40px;
+    margin-bottom: 80px;
+  }
+
+  .additionally__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 26px 40px 28px 40px;
+  }
+
+  .additionally__promotion {
+    display: flex;
     background-image: url("../img/gift-tablet@2x.jpg");
+    align-items: center;
+    text-align: center;
+    padding: 40px 56px 45px 78px;
+    justify-content: space-between;
+  }
+
+  .additionally__promotion__picture {
+    margin-top: 6px;
   }
 
   .additionally__item-title {
@@ -117,18 +173,38 @@
     width: 30%;
     margin-bottom: 25px;
   }
+
+  .additionally__item-tab {
+    width: 40%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  .additionally__item-tab--product {
+    text-align: end;
+  }
+
+  .additionally__button {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .additionally-inner {
+  .additionally__inner {
     display: flex;
     justify-content: center;
   }
 
-  .additionally-promotion {
+  .additionally__promotion {
     background-image: url("../img/gift-desktop@1x.jpg");
     max-width: 245px;
-    height: 170px;
+    height: 288px;
+    padding: 0;
+    flex-direction: column;
+    margin-top: 0;
   }
 
   .additionally__item-tab {
@@ -137,7 +213,6 @@
     margin-top: 2px;
     width: 285px;
     margin-right: 39px;
-    margin-bottom: 0;
   }
 
   .additionally__list {
@@ -147,20 +222,50 @@
   }
 
   .additionally__item {
-    display: flex;
-    padding: 15px 0 15px 0;
+    display: grid;
+    grid-template-columns: 161px 163px 244px;
+    padding-top: 15px;
+    padding-left: 1px;
+    padding-bottom: 14px;
+    padding-right: 0;
   }
 
   .additionally__item-title {
+    display: flex;
     width: 245px;
     margin: 0 81px 0 0;
+    align-items: center;
+    text-align: center;
   }
 
   .additionally__item-tab--price {
-    width: 95px;
+    width: 41px;
+    text-align: left;
   }
 
-  .additionally-button {
+  .additionally__button {
     width: 245px;
+  }
+
+  .additionally__title {
+    margin-left: 0;
+  }
+
+  .additionally {
+    padding-top: 56px;
+    padding-bottom: 17px;
+  }
+
+  .additionally__item-tab--product {
+    text-align: left;
+  }
+
+  .additionally__promotion__picture {
+    margin-top: 58px;
+  }
+
+  .additionally__promotion-text {
+    text-align: center;
+    margin-bottom: 33px;
   }
 }

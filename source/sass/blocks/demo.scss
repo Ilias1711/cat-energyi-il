@@ -12,7 +12,7 @@
 
 .demo {
   padding-top: 17px;
-  padding-bottom: 24px;
+  padding-bottom: 10px;
   background-color: $platinum;
 }
 
@@ -87,7 +87,7 @@
   color: $black;
   text-align: center;
   margin-top: 32px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 14px;
   font-weight: 400;
 }
@@ -148,6 +148,15 @@
   display: none;
 }
 
+.demo__container {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.demo__progress {
+  padding-bottom: 30px;
+}
+
 @media (min-width: $tablet-width) {
   .demo__wrapper {
     padding-left: 30px;
@@ -156,14 +165,22 @@
 
   .demo {
     position: relative;
-    padding-top: 44px;
+    padding-top: 65px;
     padding-bottom: 65px;
-    background-color: $platinum;
+    background-color: transparent;
+  }
+
+  .demo__container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 708px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .demo__title {
     font-size: 60px;
-    margin-bottom: 65px;
+    margin-bottom: 62px;
   }
 
   .demo__text {
@@ -180,6 +197,7 @@
     font-weight: 400;
     line-height: 37px;
     text-align: center;
+    background-color: transparent;
   }
 
   .demo__stats-item {
@@ -244,13 +262,13 @@
   }
 
   .demo__progress {
-    margin-top: 122px;
-    background-color: $platinum;
+    margin-top: 91px;
+    background-color: transparent;
     height: 512px;
   }
 
   .demo__stats-subtitle {
-    background-color: $platinum;
+    background-color: $white;
     font-family: $fontLato;
     font-size: 14px;
     font-weight: 400;
@@ -259,13 +277,37 @@
     top: 63px;
     width: 136px;
   }
+
+  .demo__abs {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 462px;
+    background-color: $platinum;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .demo {
     display: flex;
-    background-color: $smokywhite;
-    padding-top: 23px;
+    background-color: transparent;
+    padding-top: 45px;
+    padding-bottom: 56px;
+  }
+
+  .demo__abs {
+    top: 181px;
+    height: 463px;
+    background-color: $platinum;
+  }
+
+  .demo__container {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1220px;
   }
 
   .demo__wrapper {
@@ -316,114 +358,3 @@
   }
 }
 
-.slider-range {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  background-color: transparent;
-}
-
-.slider-range__item {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  max-width: 280px;
-
-  @media (min-width: 1200px) {
-    max-width: 560px;
-  }
-}
-
-.slider-range__slide {
-  width: 50%;
-  overflow: hidden;
-
-  &--before {
-    text-align: right;
-  }
-
-  &--after {
-    text-align: left;
-  }
-}
-
-.slider-range__image {
-  max-width: 280px;
-  background-color: transparent;
-
-  @media (min-width: 764px) {
-    max-width: 560px;
-  }
-}
-
-.slider-range__scale {
-  position: absolute;
-  top: 0;
-  width: 4px;
-  height: 100%;
-  cursor: pointer;
-}
-
-.slider-range__bar {
-  width: 4px;
-  height: 100%;
-  border-radius: 2px;
-  background-color: grey;
-
-  &:hover {
-    background-color: green;
-  }
-
-  &:active {
-    background-color: green;
-  }
-}
-
-.slider-range__togle {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-20px, -20px);
-  background: white;
-  border: 2px solid grey;
-  border-radius: 20px;
-  cursor: pointer;
-
-  &:hover {
-    border: 2px solid green;
-  }
-
-  &:active {
-    border: 2px solid green;
-  }
-
-  &--left::before,
-  &--right::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-4px, -9px);
-    margin-left: -9px;
-    border-top: 9px solid transparent;
-    border-bottom: 9px solid transparent;
-    border-right: 9px solid grey;
-  }
-
-  &--right::after {
-    transform: rotate(180deg) translate(-13px, 9px);
-  }
-
-  &--left:hover::before,
-  &--right:hover::after {
-    border-right-color: green;
-  }
-
-  &--left:active::before,
-  &--right:active::after {
-    border-right-color: green;
-  }
-}

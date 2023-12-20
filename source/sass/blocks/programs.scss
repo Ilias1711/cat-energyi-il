@@ -1,15 +1,11 @@
-.programs__wrapper {
-  padding-left: 20px;
-  padding-right: 20px;
-}
 
-.programs__list {
+.program__list {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-.programs__list-item {
+.program__list-item {
   position: relative;
   padding: 21px;
   margin-top: 20px;
@@ -38,7 +34,7 @@
   height: 50px;
 }
 
-.program-item__title {
+.program__item__title {
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
@@ -48,7 +44,7 @@
   margin-bottom: 12px;
 }
 
-.program-item__intro {
+.program__item__intro {
   font-family: $fontLato;
   color: $grey;
   width: 100%;
@@ -61,7 +57,7 @@
   line-height: 18px;
 }
 
-.program-item__link {
+.program__item__link {
   position: relative;
   align-items: center;
   display: flex;
@@ -85,7 +81,7 @@
   line-height: 16px;
 }
 
-.program-icon {
+.program__icon {
   position: absolute;
   overflow: hidden;
 }
@@ -100,13 +96,10 @@
   position: absolute;
   top: 15px;
   width: 68px;
+  left: -13px;
 }
 
 @media (min-width: $tablet-width) {
-  .programs__wrapper {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
 
   .program__link-title {
     padding-right: 23px;
@@ -116,7 +109,7 @@
     text-align: center;
   }
 
-  .programs__list-item {
+  .program__list-item {
     padding: 76px 60px 55px 52px;
     margin-top: 0;
     margin-bottom: 31px;
@@ -131,21 +124,21 @@
     margin-left: auto;
   }
 
-  .program-icon--slim {
+  .program__icon--slim {
     left: 30px;
     bottom: 16px;
     width: 70%;
     height: 100%;
   }
 
-  .program-item__title {
+  .program__item__title {
     font-size: 36px;
     line-height: 37px;
     margin-top: 0;
     margin-bottom: 8px;
   }
 
-  .program-item__intro {
+  .program__item__intro {
     font-family: $fontLato;
     font-size: 16px;
     font-weight: 400;
@@ -156,25 +149,25 @@
     padding-right: 24px;
   }
 
-  .program-item__intro--pro {
+  .program__item__intro--pro {
     padding-bottom: 57px;
   }
 
-  .program-item__title,
-  .program-item__intro,
-  .program-item__link {
+  .program__item__title,
+  .program__item__intro,
+  .program__item__link {
     width: calc(100% - 223px);
   }
 
 
-  .program-icon--pro {
+  .program__icon--pro {
     left: -35px;
     bottom: 1px;
     width: 133%;
     height: 100%;
   }
 
-  .program-icon--vector {
+  .program__icon--vector {
     width: 140px;
     height: 194px;
   }
@@ -187,21 +180,22 @@
   }
 
   .program__picture--pro {
-    width: 268px;
+    width: 279px;
     height: 112px;
     top: 40px;
+    left: -30px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .programs__list {
+  .program__list {
     display: flex;
     gap: 80px;
   }
 
-  .programs__list-item {
+  .program__list-item {
     width: 46.7%;
-    padding: 45px 40px 58px 50px;
+    padding: 77px 40px 58px 50px;
   }
 
   .program__picture--slim {
@@ -212,36 +206,33 @@
   }
 
   .program__picture--pro {
-    top: 21px;
-    width: 134px;
+    top: 19px;
     height: 56px;
+    left: -85px;
   }
 
-  .programs__wrapper {
-    padding-left: 110px;
-    padding-right: 110px;
+  .program__wrapper {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .program__picture {
     display: flex;
     position: relative;
-    top: 3px;
-    left: -2px;
     width: 100px;
     height: 100px;
-    margin-left: 0;
-    margin-top: 0;
+    margin-top: -183px;
   }
 
-  .program-item__title {
+  .program__item__title {
     display: flex;
     width: calc(100% - 162px);
     margin-bottom: 0;
   }
 
-  .program-item__intro {
+  .program__item__intro {
     width: 100%;
     padding-bottom: 8px;
-    margin-top: 42px;
+    margin-top: 71px;
   }
 }

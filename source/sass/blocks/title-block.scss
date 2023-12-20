@@ -1,0 +1,36 @@
+.title-block {
+  padding-top: 14px;
+  padding-bottom: 28px;
+  border-top: 1px solid $lightgrey;
+  border-bottom: 1px solid $lightgrey;
+}
+
+
+.title-block__title {
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 400;
+  color: $black;
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .title-block {
+    padding-top: 65px;
+    padding-bottom: 50px;
+    border: none;
+  }
+
+  .title-block__title {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title-block {
+    padding-top: 83px;
+  }
+}

@@ -1,3 +1,7 @@
+.search {
+  background-color: $smokywhite;
+}
+
 .search__wrapper {
   box-sizing: inherit;
   padding-left: 20px;
@@ -39,7 +43,7 @@
 
 @media (min-width: $tablet-width) {
   .search__inner {
-    padding: 63px 49px 59px;
+    padding: 64px 50px 59px;
   }
 
   .search__title {
@@ -63,12 +67,20 @@
     position: relative;
   }
 
+  .search__inner {
+    padding-left: 58px;
+  }
+
   .search__wrapper {
     position: absolute;
     z-index: 1;
-    top: 95px;
-    left: 40px;
+    top: 96px;
+    left: 110px;
     width: 570px;
     background-color: $white;
+  }
+
+  .search__inner {
+    display: none;
   }
 }

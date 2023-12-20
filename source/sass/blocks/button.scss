@@ -1,0 +1,25 @@
+
+.button {
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 9px;
+  background-color: $green;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+  }
+}

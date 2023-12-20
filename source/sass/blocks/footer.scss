@@ -50,16 +50,16 @@
 
 .footer___acaemy-link {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   color: inherit;
   text-decoration: none;
 }
 
 @media (min-width: $tablet-width) {
   .footer {
-    padding-top: 22px;
-    padding-bottom: 50px;
+    padding-top: 17px;
+    padding-bottom: 25px;
     align-items: center;
   }
 
@@ -68,9 +68,14 @@
     padding-right: 30px;
   }
 
+  .footer___acaemy-link {
+    justify-content: space-between;
+  }
+
   .footer__wrapper {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     -webkit-box-align: center;
     -ms-flex-align: center;
   }
@@ -88,18 +93,29 @@
   .footer__social-list {
     border: none;
     margin-top: 10px;
-    padding-left: 22px;
+    padding-left: 1px;
   }
 
   .footer__block-htmlAcademy {
-    width: 22%;
-    padding-top: 30px;
-    margin-left: 36px;
+    width: 23%;
+    padding-top: 33px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .footer__social-list {
     border: none;
+  }
+
+  .footer___acaemy-title {
+    padding-right: 26px;
+  }
+
+  .footer {
+    padding-top: 25px;
+  }
+
+  .footer___acaemy-link {
+    justify-content: flex-end;
   }
 }

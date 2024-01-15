@@ -5,43 +5,11 @@
   right: 0;
   background-color: $white;
   min-height: 200px;
-}
-
-.main-nav__toggle {
-  z-index: 2;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  background-color: transparent;
-  color: $black;
-  border: none;
-  background-repeat: no-repeat;
-  margin-top: 7px;
+  z-index: 1;
 }
 
 .main-nav--closed {
   display: none;
-}
-
-
-.main-nav__toggle .main-nav__toggle--closed::before {
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: 17px;
-  width: 36px;
-  height: 2px;
-  background-color: $black;
-  box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
-  border: none;
-}
-
-.main-nav__toggle--closed {
-  background-image: url('../img/button-mobile-closed.svg');
-}
-
-.main-nav__toggle--opened {
-  background-image: url('../img/button-mobile-opened.svg');
 }
 
 .main-nav__list-link {
@@ -60,6 +28,14 @@
   background-color: $white;
 }
 
+.main-nav__list-link:hover {
+  opacity: 0.7;
+}
+
+.main-nav__list-link:focus {
+  opacity: 0.5;
+}
+
 .main-nav__list {
   margin: 0;
   padding: 0;
@@ -70,7 +46,7 @@
 
 .main-nav__list-item {
   text-align: center;
-  border-top: 1px solid #e6e6e6;
+  border-top: 1px solid $platinum;
 }
 
 .main-nav__list-item--active .main-nav__list-link {
@@ -102,6 +78,7 @@
 
   .main-nav__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -113,10 +90,6 @@
     min-height: 50px;
     width: 62%;
   }
-
-  .main-nav__toggle {
-    display: none;
-  }
 }
 
 @media (min-width: $desktop-width) {
@@ -125,6 +98,14 @@
     width: 100%;
     margin-left: 1px;
     gap: 33px;
+  }
+
+  .main-nav__list-item--active .main-nav__list-link::after {
+    background-color: $green;
+  }
+
+  .main-nav--index .main-nav__list-link::after {
+    background-color: $white;
   }
 
   .main-nav__list-link {
@@ -143,7 +124,11 @@
     background: transparent;
   }
 
-  .main-nav__list-item--active .main-nav__list-link::after {
-    background-color: $green;
+  .main-nav--index .main-nav__list-link:hover {
+    opacity: 0.7;
+  }
+
+  .main-nav--index .main-nav__list-link:focus {
+    opacity: 0.5;
   }
 }

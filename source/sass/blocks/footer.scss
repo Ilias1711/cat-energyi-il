@@ -7,7 +7,7 @@
   padding-right: 20px;
 }
 
-.footer___acaemy-title {
+.footer___academy-title {
   font-family: $fontLato;
   font-size: 16px;
   font-weight: 400;
@@ -19,6 +19,14 @@
   text-align: center;
   padding-top: 40px;
   padding-bottom: 11px;
+}
+
+.footer__block-logo:hover {
+  opacity: 0.7;
+}
+
+.footer__block-logo:focus {
+  opacity: 0.5;
 }
 
 .footer__block-social {
@@ -33,13 +41,37 @@
   align-items: center;
   width: 100%;
   padding: 20px 0 12px;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid $lightgrey;
+  border-bottom: 1px solid $lightgrey;
 }
 
 .footer__item {
   text-align: center;
   width: 55px;
+}
+
+.footer__item-vk:hover {
+  stroke: $green;
+}
+
+.footer__item-youtube:hover {
+  stroke: $green;
+}
+
+.footer__item-telegram:hover {
+  stroke: $green;
+}
+
+.footer__item-vk:focus {
+  opacity: 0.5;
+}
+
+.footer__item-youtube:focus {
+  opacity: 0.5;
+}
+
+.footer__item-telegram:focus {
+  opacity: 0.5;
 }
 
 .footer__block-htmlAcademy {
@@ -48,12 +80,24 @@
   width: 100%;
 }
 
-.footer___acaemy-link {
+.footer___academy-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: inherit;
   text-decoration: none;
+}
+
+.footer___academy-icon {
+  fill: $grey;
+}
+
+.footer___academy-link:hover + .footer___academy-icon {
+  fill: $green;
+}
+
+.footer___academy-link:focus {
+  opacity: 0.5;
 }
 
 @media (min-width: $tablet-width) {
@@ -68,7 +112,7 @@
     padding-right: 30px;
   }
 
-  .footer___acaemy-link {
+  .footer___academy-link {
     justify-content: space-between;
   }
 
@@ -76,8 +120,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
   }
 
   .footer__block-logo {
@@ -107,7 +149,7 @@
     border: none;
   }
 
-  .footer___acaemy-title {
+  .footer___academy-title {
     padding-right: 26px;
   }
 
@@ -115,7 +157,7 @@
     padding-top: 25px;
   }
 
-  .footer___acaemy-link {
+  .footer___academy-link {
     justify-content: flex-end;
   }
 }

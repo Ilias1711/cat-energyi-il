@@ -16,6 +16,10 @@
   margin-bottom: 12px;
 }
 
+.form-program__list__item:focus-within {
+  opacity: 0.5;
+}
+
 .form-program__check-input {
   position: absolute;
   width: 1px;
@@ -52,6 +56,7 @@
   border: 1px solid $platinum;
   border-radius: 50%;
 }
+
 
 .form-program__check::after {
   content: "";

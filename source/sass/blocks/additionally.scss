@@ -20,10 +20,12 @@
   font-size: 24px;
   line-height: 24px;
   margin-bottom: 36px;
-  color: #111111;
-  position: relative; // нужен для того чтоб перекрыть полосы
-  padding-right: 10px;
-  padding-left: 10px;
+  color: $black;
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 .additionally__title::after,
@@ -31,10 +33,10 @@
   content: "";
   position: absolute;
   top: 50%;
-  width: 100vw; // чтоб тянулось на всю ширину экрана
+  width: 100vw;
   height: 3px;
   margin-top: 2px;
-  background: #68b738;
+  background: $green;
   z-index: -1;
 }
 
@@ -88,20 +90,32 @@
   border-spacing: 0;
 }
 
-.additionally__item-tab--price {
+.additionally__item-price {
   text-align: end;
 }
 
 .additionally__promotion {
-  background-image: url("../img/gift-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-color: $green;
+  position: relative;
   text-align: center;
   padding-top: 65px;
   padding-bottom: 25px;
   background-position: center center;
   background-size: 100% 100%;
   margin-top: 37px;
+}
+
+.additionally__promotion::before {
+  content: "";
+  background-image: url("../img/gift-mobile@1x.jpg");
+  position: absolute;
+  right: 0;
+  top: 20px;
+  min-height: 290px;
+  width: 100%;
+  background-color: $green;
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: -1;
 }
 
 .additionally__promotion-text {
@@ -117,8 +131,23 @@
 @media (min-width: $tablet-width) {
   .additionally__list {
     margin-bottom: 70px;
+    border-top: 1px solid $lightgrey;
+    border-bottom: 1px solid $lightgrey;
     border-left: 1px solid $lightgrey;
     border-right: 1px solid $lightgrey;
+  }
+
+  .additionally__promotion::before {
+    content: "";
+    background-image: url("../img/gift-tablet@1x.jpg");
+    position: absolute;
+    min-height: 200px;
+    right: 0;
+    width: 100%;
+    background-color: $green;
+    background-repeat: no-repeat;
+    background-position: center top;
+    z-index: -1;
   }
 
   .additionally {
@@ -136,27 +165,20 @@
     font-size: 36px;
     font-weight: 400;
     line-height: 36px;
-    letter-spacing: 0em;
     text-align: center;
     margin-left: 40px;
     margin-bottom: 80px;
   }
 
   .additionally__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 26px 40px 28px 40px;
   }
 
   .additionally__promotion {
     display: flex;
-    background-image: url("../img/gift-tablet@2x.jpg");
     align-items: center;
     text-align: center;
     padding: 40px 56px 45px 78px;
@@ -183,7 +205,7 @@
     margin-bottom: 18px;
   }
 
-  .additionally__item-tab--product {
+  .additionally__item-product {
     text-align: end;
   }
 
@@ -199,12 +221,16 @@
   }
 
   .additionally__promotion {
-    background-image: url("../img/gift-desktop@1x.jpg");
     max-width: 245px;
-    height: 288px;
+    margin-bottom: 70px;
     padding: 0;
     flex-direction: column;
     margin-top: 0;
+  }
+
+  .additionally__promotion::before {
+    background-image: url("../img/gift-desktop@2x.jpg");
+    min-height: 288px;
   }
 
   .additionally__item-tab {
@@ -238,7 +264,7 @@
     text-align: center;
   }
 
-  .additionally__item-tab--price {
+  .additionally__item-price {
     width: 41px;
     text-align: left;
   }
@@ -256,7 +282,7 @@
     padding-bottom: 17px;
   }
 
-  .additionally__item-tab--product {
+  .additionally__item-product {
     text-align: left;
   }
 

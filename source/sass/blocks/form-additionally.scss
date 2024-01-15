@@ -28,7 +28,7 @@
   content: "";
   position: absolute;
   top: 50%;
-  width: 100vw; // чтоб тянулось на всю ширину экрана
+  width: 100vw;
   height: 3px;
   margin-top: 2px;
   background: $green;
@@ -64,8 +64,8 @@
   overflow: hidden;
 }
 
-.form-additionally__input:checked+.form-additionally__label::before {
-  background-image: url(../img/tick.svg);
+.form-additionally__input:checked + .form-additionally__label::before {
+  background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 70%;
@@ -93,6 +93,10 @@
   width: 30px;
   height: 30px;
   border: 1px solid $platinum;
+}
+
+.form-additionally__label:focus {
+  opacity: 0.5;
 }
 
 @media (min-width: $tablet-width) {
@@ -139,11 +143,12 @@
 
   .form-additionally__list {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    column-count: 4;
     margin-bottom: 20px;
   }
 
   .form-additionally__item {
-    width: auto;
+    width: 25%;
   }
 }

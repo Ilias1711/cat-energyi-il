@@ -299,7 +299,7 @@
 
   .demo__abs {
     top: 181px;
-    height: 463px;
+    height: auto;
     background-color: $platinum;
   }
 
@@ -326,7 +326,7 @@
   }
 
   .demo__stats-subtitle {
-    background-color: $smokywhite;
+    background-color: $platinum;
   }
 
   .demo__text {
@@ -357,4 +357,3 @@
     background-color: transparent;
   }
 }
-

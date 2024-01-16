@@ -21,6 +21,7 @@
   height: 50px;
   border-radius: 50%;
   background-color: $green;
+  margin-top: -4px;
 }
 
 .program__icon {
@@ -38,6 +39,7 @@
   width: calc(100% - 70px);
   margin-top: 10px;
   margin-bottom: 12px;
+  margin-left: 18px;
 }
 
 .program__item__intro {
@@ -130,6 +132,7 @@
     line-height: 37px;
     margin-top: 0;
     margin-bottom: 8px;
+    margin-left: 0;
   }
 
   .program__item__intro {
@@ -183,11 +186,12 @@
 @media (min-width: $desktop-width) {
   .program__list {
     display: flex;
+    flex-wrap: wrap;
     gap: 80px;
   }
 
   .program__list-item {
-    width: 46.7%;
+    width: 39.3%;
     padding: 77px 40px 58px 50px;
   }
 

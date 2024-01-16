@@ -18,7 +18,7 @@
 .footer__block-logo {
   text-align: center;
   padding-top: 40px;
-  padding-bottom: 11px;
+  padding-bottom: 3px;
 }
 
 .footer__block-logo:hover {
@@ -92,7 +92,7 @@
   fill: $grey;
 }
 
-.footer___academy-link:hover + .footer___academy-icon {
+.footer___academy-link:hover .footer___academy-icon {
   fill: $green;
 }
 
@@ -103,7 +103,7 @@
 @media (min-width: $tablet-width) {
   .footer {
     padding-top: 17px;
-    padding-bottom: 25px;
+    padding-bottom: 23px;
     align-items: center;
   }
 
@@ -125,7 +125,7 @@
   .footer__block-logo {
     width: 22%;
     text-align: left;
-    padding-top: 30px;
+    padding-top: 23px;
   }
 
   .footer__block-social {

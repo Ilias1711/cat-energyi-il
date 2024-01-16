@@ -1,5 +1,5 @@
 .form-additionally {
-  padding-bottom: 11px;
+  padding-bottom: 16px;
   margin-top: 17px;
 }
 
@@ -45,12 +45,12 @@
 
 .form-additionally__list {
   list-style-type: none;
-  margin-top: 14px;
+  margin-top: 28px;
   padding: 0;
 }
 
 .form-additionally__item {
-  margin-bottom: 13px;
+  margin-bottom: 11px;
 }
 
 .form-additionally__input {
@@ -87,7 +87,7 @@
 .form-additionally__label::before {
   content: "";
   position: absolute;
-  left: -15px;
+  left: -1px;
   top: 0;
   display: block;
   width: 30px;
@@ -111,6 +111,7 @@
   .form-additionally__label::before {
     width: 40px;
     height: 40px;
+    left: -17px;
   }
 
   .form-additionally__list {
@@ -118,8 +119,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 39px;
-    margin-bottom: 11px;
+    margin-top: 64px;
+    margin-bottom: 8px;
   }
 
   .form-additionally__item {
@@ -145,10 +146,10 @@
     display: flex;
     flex-wrap: wrap;
     column-count: 4;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   .form-additionally__item {
-    width: 25%;
+    width: 243px;
   }
 }

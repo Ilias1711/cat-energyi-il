@@ -5,7 +5,9 @@
     <title>Cat Energy</title>
     <link rel="stylesheet" href="./css/style.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link sizes="32x32" rel="icon" href="img/favicon/favicon.ico" />
+    <link rel="preload" as="font" href="./fonts/Lato-Regular.woff2" />
+    <link rel="preload" as="font" href="./fonts/Oswald-Regular.woff2" />
+    <link sizes="32x32" rel="icon" href="img/favicon/favicon.svg" />
   </head>
   <body class="page__body">
     <header class="main-header main-header-index">
@@ -33,7 +35,7 @@
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
-        <nav class="main-nav main-nav--opened main-nav--index">
+        <nav class="main-nav main-nav--closed main-nav--index">
           <ul class="main-nav__list">
             <li class="main-nav__list-item main-nav__list-item--active">
               <a class="main-nav__list-link" href="index.html">
@@ -255,7 +257,7 @@
               <div class="slider-range__scale">
                 <div class="slider-range__bar">
                   <button
-                    class="slider-range__togle slider-range__togle--left slider-range__togle--right"
+                    class="slider-range__toggle slider-range__toggle--left slider-range__toggle--right"
                     type="button"
                   >
                     <span class="visually-hidden"

@@ -143,9 +143,8 @@
   }
 
   .form-additionally__list {
-    display: flex;
-    flex-wrap: wrap;
-    column-count: 4;
+    display: grid;
+    grid-template-columns: 326px 324px 325px 245px;
     margin-bottom: 16px;
   }
 

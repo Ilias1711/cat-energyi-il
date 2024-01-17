@@ -23,7 +23,7 @@
   border: none;
   background-repeat: no-repeat;
   margin-top: 7px;
-  background-image: url("../img/button-mobile-closed.svg");
+  background-image: url("../img/button-mobile-opened.svg");
 }
 
 .main-header-index::after {
@@ -40,12 +40,8 @@
   z-index: -1;
 }
 
-.main-header__toggle--closed {
-  background-image: url("../img/button-mobile-closed.svg");
-}
-
 .main-header__toggle--opened {
-  background-image: url("../img/button-mobile-opened.svg");
+  background-image: url("../img/button-mobile-closed.svg");
 }
 
 

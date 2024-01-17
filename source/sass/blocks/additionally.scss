@@ -58,10 +58,6 @@
 .additionally__item {
   padding-top: 14px;
   padding-bottom: 18px;
-  border-top: 1px solid $lightgrey;
-}
-
-.additionally__item-vitamin {
   border-bottom: 1px solid $lightgrey;
 }
 
@@ -155,10 +151,13 @@
     padding: 26px 40px 28px 40px;
   }
 
+  .additionally__item:last-child {
+    border-bottom: none;
+  }
+
   .additionally__item-price {
     width: 88px;
   }
-
 
   .additionally__promotion {
     display: flex;
@@ -227,6 +226,14 @@
     width: 895px;
     margin-right: 80px;
     border: 0;
+  }
+
+  .additionally__item:first-child {
+    border-top: 1px solid $lightgrey;
+  }
+
+  .additionally__item:last-child {
+    border-bottom: 1px solid $lightgrey;
   }
 
   .additionally__item {
